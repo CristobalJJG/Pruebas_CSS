@@ -1,0 +1,51 @@
+.loader{
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+
+.ball{
+    width: 15px; height: 15px;
+    background-color: #eceff1;
+    border-radius: 75%;
+    left: 10px;
+    position: absolute;
+    animation: bounce 0.5s linear infinite alternate;
+}
+
+@keyframes bounce{
+    0%{transform: scale(1.15, 1);}
+    50%{transform: translate(16px);}
+    100%{transform: translate(16px) scale(1.15, 1);}
+}
+
+.bar{
+    content: "";
+    width: 9px;
+    height: 60px;
+    position: absolute;
+    border-radius: 20px;   
+}
+
+.bar-l{
+    background-color: #ef5350;
+    animation: topBottom 0.5s linear infinite alternate;
+}
+
+.bar-r{
+    background-color: #1976d2;
+    right: 0;
+    animation: bottomTop 0.5s linear infinite alternate;
+}
+
+@keyframes topBottom {
+    0%{transform: translateY(-45%);}
+    100%{transform: translateY(45%);}
+}
+
+
+@keyframes bottomTop {
+    0%{transform: translateY(45%);}
+    100%{transform: translateY(-45%);}
+}
